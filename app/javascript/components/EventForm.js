@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {isEmptyObject,validateEvent} from '../helpers/helpers';
+import Pikaday from 'pikaday';
+import 'pikaday/css/pikaday.css';
 
 
 class EventForm extends React.Component {
@@ -11,7 +13,7 @@ class EventForm extends React.Component {
             event: props.event,
             errors: {},
         };
-
+        this.dateInput = React.createRef();
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -129,21 +131,22 @@ class EventForm extends React.Component {
             }
             /> <
             /label> <
-            /div> <
-            div >
-            <
+            /div> <div> <
             label htmlFor = "event_date" >
-            <
-            strong > Date: < /strong> <
-            input type = "text"
+                <
+                strong > Date: < /strong> <
+                input
+            type = "text"
             id = "event_date"
             name = "event_date"
-            onChange = {
-                this.handleInputChange
+            ref = {
+                this.dateInput
             }
-            /> <
-            /label> <
-            /div> <
+            autoComplete = "off" /
+                >
+                <
+                /label> <
+                /div> <
             div >
             <
             label htmlFor = "title" >

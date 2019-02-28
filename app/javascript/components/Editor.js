@@ -40,10 +40,10 @@ class Editor extends React.Component {
                 <Header />
                 <div className="grid">
                 <EventList events = {events} activeId = {Number(eventId)}/>
-                    <switch>
+                    <Switch>
                         <PropsRoute path = "/events/new"component = {EventForm}/>
                         <PropsRoute path="/events/:id"component = {Event} event={event}/>
-                    </switch>
+                    </Switch>
                 </div>
             </div>
        
