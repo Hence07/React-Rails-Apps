@@ -1,6 +1,6 @@
 # README
 
-In this Project, we will be building a simple  Event-Manager app with Rails api server side and  React as frontEnd.
+In this Project, we will be building a very  simple  Event-Manager app with Rails api server side and  React as frontEnd.
 
 
 * Ruby version
